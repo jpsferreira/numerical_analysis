@@ -1,7 +1,7 @@
 clear all;
 clc;
-%% EXERCICIOS 1
-% 1 - 
+%% EXERCICIOS 1 - MATLAB
+%% (1)
 % Considere os vetores X=[2,0,-5,6] and Y=[2,10,1,-15]
 X = [2,0,-5,6];
 Y=[2,10,1,-15];
@@ -46,3 +46,17 @@ x = 1:2:10; % cria vetor de inteiros impares ate 10
 y = 2*ones(1,length(x)); % vetor de 1s com a mesma dimensao de x
 z = y.^x; % operacao elemento a elemento: elementos de y elevados ao correspondente elemento de x
 w = sum(z); % soma os elementos de z
+
+%% (2)
+% Considere a matriz
+A = [5,2,-1;1,0,0;-2,4,6];
+% a) Calcule o valor do seu determinante
+detA = det(A);
+
+% b) Explique o resultado de:
+Z = 10*ones(1,size(A,1)); % vetor linha de "10s" com comprimento igual ao numero de linhas da matriz A
+num_linhasZ = size(A,1); % numero de linhas de Z
+num_colunasZ = size(A,2); % numero de colunas de Z
+
+% c) Obtenha o vetor S com a soma das colunas de A
+S = sum(A,2);
