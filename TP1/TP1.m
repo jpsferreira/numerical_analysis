@@ -49,7 +49,7 @@ w = sum(z); % soma os elementos de z
 
 %% (2)
 % Considere a matriz
-A = [5,2,-1;1,0,0;-2,4,6];
+A = [5,2,-1;1,0,8;-2,4,6];
 % a) Calcule o valor do seu determinante
 detA = det(A);
 
@@ -59,4 +59,61 @@ num_linhasZ = size(A,1); % numero de linhas de Z
 num_colunasZ = size(A,2); % numero de colunas de Z
 
 % c) Obtenha o vetor S com a soma das colunas de A
-S = sum(A,2);
+S = sum(A,2)';
+
+% d) Obtenhas a soma dos elementos de A
+S_A = sum(A,"all");
+
+% e) Produto dos elementos das colunas A
+U = prod(A,2);
+
+% g) O que significa a expressao S = [S sum(S)] ? 
+Sg = [S sum(S)]; % concatena à direita do vetor linha S a soma dos elementos de S
+
+% Obtenha o vetor S1 juntando a S um último elementos com o mínimo dos seus
+% elementos
+U = [S min(S)];
+
+% i)
+A1 = [A ones(size(A,1),1)];
+A1 = [A1; ones(1, size(A1,2))];
+
+% j)
+A2 = [A sum(A,2)];
+A2 = [A2; sum(A2,1)];
+
+% k) 
+
+
+% l)
+
+
+% m) transforme a matriz A substituindo a primeira linha pela sua soma com
+% a ultima multiplicada por 2 (??)
+
+% n) maximo e minimo de A, e posicoes
+
+[maxA,imaxA] = max(A);
+[minA,iminA] = min(A);
+
+
+%% (3) Calculo de volume de um cilindro
+%a = input("introduza a");
+%b = input("introduza b");
+%V = pi()*a*a*b; % volume do cilindro
+
+%% (4) Calculo de volume de um cilindro usando funcao "cilindro"
+a = 1;
+b = 1;
+Vf = cilindro(a,b);
+
+%% (5) tabelar a funcao coseno em [a,b], com intervalos dx
+a = 0;
+b = pi();
+dx = 0.1;
+xv = a:dx:b;
+yv = cos(xv);
+plot(xv,yv)
+
+
+
