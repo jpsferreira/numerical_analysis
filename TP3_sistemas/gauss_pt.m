@@ -18,7 +18,7 @@ for k=1:size(a,1)-1
     l=k;
     c=k;
     for i=k+1:size(a,1) %procurar por maximo na submatriz
-        for j=k+1:size(a,1)
+        for j=k:size(a,1)
             if abs(a(i,k))> max
                 max = abs(a(i,k));
                 l=i;
